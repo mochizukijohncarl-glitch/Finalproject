@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffdf5;
+}
+
+.hollow-text {
+    font-size: 10em;
+    font-weight: bold;
+}
+.hollow-text:hover {
+    -webkit-text-stroke: 1px red;
+    color: transparent;
+}
+
+header {
+    position: fixed;              
+    width: 100%;   
+    background: #0b6425;
+    padding: 10px 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+header.blurred {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 140px;
+    height: 80px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Stanwick', sans-serif;
+}
+
+.sanddunes {
+    color: #C83227;
+}
+
+.snackhouse {
+    color:#D8863A;
+}
+
+.nav-links {
+    flex-flow: wrap;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #D8863A;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links.active {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.space {
+    margin-top: 120px;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'GEMSEAtrial', sans-serif; 
+    color: green;       
+}
+
+.contact-container h1:hover {
+    color: red;       
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: green;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: green;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    color: #0b6425;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid green;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: green;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: darkgreen;
+}
+
+footer {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 2px solid gray;
+}
+
+@media (max-width: 768px) {
+.space {
+margin-top: 150px;
+margin-bottom: 150px;
+}
+
+.contact-container {
+max-width: 90%;
+margin: 40px auto;
+padding: 20px;
+}
+
+.contact-container h1 {
+font-size: 26px;
+}
+
+.contact-container p {
+font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 95%;
+font-size: 13px;
+padding: 10px;
+}
+
+.contact-form button {
+font-size: 16px;
+padding: 12px;
+}
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #D8863A;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    z-index: 1000;
+    padding-left: 80px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links a:hover {
+    color: red;
+    transition: 0.3s;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+}
